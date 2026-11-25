@@ -50,15 +50,10 @@ Because this application relies on a local LaTeX engine and a PostgreSQL databas
    npm install
 3. **Configure Environment Variables:**
    ```Code snippet
-   DATABASE_URL=postgresql://username:password@your-database-host:5432/dbname?sslmode=require
+   DATABASE_URL=postgresql://postgres:YOUR_PASSWORD@localhost:5432/postgres
 4. **Seed the Database:**
    ```bash
    node seed.js
 5. **Clone the repository:**
    ```bash
    npm start
-
-### 🐳 Docker Setup
-  ```bash
-   docker build -t cvbuilder-app .
-   docker run -p 3000:3000 -e DATABASE_URL="your_database_string" cvbuilder-app
